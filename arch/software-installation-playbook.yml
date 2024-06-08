@@ -49,21 +49,14 @@
           # - blender
         state: present
 
-    - name: Install development tools from AUR using Yay
-      command: "yay -S --noconfirm {{ item }}"
-      with_items:
-        - brave-bin
-        - cava
-        - fastfetch
-        - tpm
-        - tmuxifier
-        - nvm
-        - postman-bin
-        - virtualbox
-        - visual-studio-code-bin
-        - the_silver_searcher
-        - exa
-        - fd
+    - name: Copy AUR installation script to target
+      copy:
+        src: ./install_aur_packages.sh
+        dest: /tmp/install_aur_packages.sh
+        mode: '0755'
+
+    - name: Execute AUR installation script
+      command: /tmp/install_aur_packages.sh
 
 - name: Install Fonts and Appearance Tools
   hosts: localhost
@@ -83,13 +76,6 @@
           - xcolor
         state: present
 
-    - name: Install fonts and appearance tools from AUR using Yay
-      command: "yay -S --noconfirm {{ item }}"
-      with_items:
-        - espanso
-        - conky
-        - picom-jonaburg-git
-
 - name: Install Network and Communication Tools
   hosts: localhost
   become: yes
@@ -104,11 +90,6 @@
           - teams
           - anydesk
         state: present
-
-    - name: Install network and communication tools from AUR using Yay
-      command: "yay -S --noconfirm {{ item }}"
-      with_items:
-        - whatsapp-nativefier
 
 - name: Install Media and Utility Tools
   hosts: localhost

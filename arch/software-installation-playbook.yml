@@ -30,7 +30,6 @@
             - tmux
             - lazygit
             - fzf
-            - sxhkd
             - ripgrep
             - docker
             - github-cli
@@ -55,6 +54,8 @@
         - name: Install AUR packages
           command: "yay -S --noconfirm {{ item }}"
           with_items:
+            - sxhkd
+            - autotiling
             - brave-bin
             - cava
             - fastfetch
@@ -113,6 +114,7 @@
             - docker-compose
             - ufw
             - clamav
+            - xpad
           ignore_errors: yes
 
         - name: Enable Docker service

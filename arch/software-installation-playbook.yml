@@ -60,7 +60,7 @@
         - nvm
         - postman-bin
         - virtualbox
-        - code-bin
+        - visual-studio-code-bin
         - the_silver_searcher
         - exa
         - fd

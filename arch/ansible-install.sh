@@ -2,7 +2,7 @@
 
 # update the system and install base-devel
 echo "updating the system and installing base-devel..."
-sudo pacman -syu --noconfirm
+sudo pacman -Syu --noconfirm
 sudo pacman -S base-devel --noconfirm
 
 # install ansible

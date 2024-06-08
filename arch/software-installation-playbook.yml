@@ -11,9 +11,11 @@
           with_items:
             - base-devel
             - git
+            - zsh
             - nodejs
             - npm
-            - zsh
+            - python
+            - rust
           ignore_errors: yes
 
     - name: Install development tools
@@ -28,6 +30,7 @@
             - tmux
             - lazygit
             - fzf
+            - sxhkd
             - ripgrep
             - docker
             - github-cli

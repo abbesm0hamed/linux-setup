@@ -51,12 +51,12 @@
 
     - name: Copy AUR installation script to target
       copy:
-        src: ./install_aur_packages.sh
-        dest: /tmp/install_aur_packages.sh
+        src: ./install_packages_from_aur.sh
+        dest: /tmp/install_packages_from_aur.sh
         mode: '0755'
 
     - name: Execute AUR installation script
-      command: /tmp/install_aur_packages.sh
+      command: /tmp/install_packages_from_aur.sh
 
 - name: Install Fonts and Appearance Tools
   hosts: localhost
@@ -81,30 +81,29 @@
   become: yes
   tasks:
     - name: Install network and communication tools from official repositories
-      pacman:
-        name:
-          - discord
-          - telegram-desktop
-          - slack-desktop
-          - zoom
-          - teams
-          - anydesk
-        state: present
+      command: "yay -S --noconfirm {{ item }}"
+      with_items:
+        - discord
+        - telegram-desktop
+        - slack-desktop
+        - zoom
+        - teams
+        - anydesk
 
 - name: Install Media and Utility Tools
   hosts: localhost
   become: yes
   tasks:
     - name: Install media and utility tools from official repositories
-      pacman:
-        name:
-          - gimp
-          - cheese
-          - audacity
-          - docker-compose
-          - ufw
-          - clamav
-        state: present
+      command: "yay -S --noconfirm {{ item }}"
+      with_items:
+        - discord
+        - gimp
+        - cheese
+        - audacity
+        - docker-compose
+        - ufw
+        - clamav
 
     - name: Enable Docker service
       systemd:

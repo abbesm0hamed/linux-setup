@@ -14,6 +14,7 @@
             - nodejs
             - npm
             - zsh
+          ignore_errors: yes
 
     - name: Install development tools
       block:
@@ -26,6 +27,8 @@
             - neofetch
             - tmux
             - lazygit
+            - fzf
+            - ripgrep
             - docker
             - github-cli
             - bat
@@ -42,6 +45,7 @@
             - calibre
             - vlc
             - inkscape
+          ignore_errors: yes
 
     - name: Install AUR packages
       block:
@@ -63,6 +67,7 @@
             - espanso
             - conky
             - picom-jonaburg-git
+          ignore_errors: yes
 
     - name: Install fonts and appearance tools
       block:
@@ -78,6 +83,7 @@
             - kvantum
             - redshift
             - xcolor
+          ignore_errors: yes
 
     - name: Install network and communication tools
       block:
@@ -91,6 +97,7 @@
             - zoom
             - teams
             - anydesk
+          ignore_errors: yes
 
     - name: Install media and utility tools
       block:
@@ -103,6 +110,7 @@
             - docker-compose
             - ufw
             - clamav
+          ignore_errors: yes
 
         - name: Enable Docker service
           systemd:

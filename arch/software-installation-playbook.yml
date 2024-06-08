@@ -14,17 +14,6 @@
           - zsh
         state: present
 
-    - name: Install Yay AUR Helper
-      shell: |
-        pacman -S --needed git base-devel
-        git clone https://aur.archlinux.org/yay.git /tmp/yay
-        cd /tmp/yay
-        makepkg -si --noconfirm
-      args:
-        chdir: /tmp
-      register: yay_installed
-      changed_when: "'yay' not in ansible_facts.packages"
-
 - name: Install Development Tools
   hosts: localhost
   become: yes
@@ -75,7 +64,6 @@
         - the_silver_searcher
         - exa
         - fd
-      when: yay_installed.changed
 
 - name: Install Fonts and Appearance Tools
   hosts: localhost
@@ -101,7 +89,6 @@
         - espanso
         - conky
         - picom-jonaburg-git
-      when: yay_installed.changed
 
 - name: Install Network and Communication Tools
   hosts: localhost
@@ -122,7 +109,6 @@
       command: "yay -S --noconfirm {{ item }}"
       with_items:
         - whatsapp-nativefier
-      when: yay_installed.changed
 
 - name: Install Media and Utility Tools
   hosts: localhost

@@ -24,6 +24,7 @@
           command: "yay -S --noconfirm {{ item }}"
           with_items:
             - stow
+            - python-pip
             - arandr
             - wezterm
             - neofetch
@@ -70,6 +71,9 @@
             - fd
             - espanso
             - conky
+            - eww
+            - prayer-times
+            - picom
             - picom-jonaburg-git
           ignore_errors: yes
 

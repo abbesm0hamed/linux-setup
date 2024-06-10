@@ -40,6 +40,17 @@
             - rust
           ignore_errors: yes
 
+    - name: Install Nvidia GPU packages
+      block:
+        - name: Install Nvidia GPU packages 
+          command: "yay -S --noconfirm {{ item }}"
+          with_items:
+            - nvidia
+            - nvidia-lts
+            - nvidia-settings
+            - nvidia-utils
+          ignore_errors: yes
+
     - name: Install development tools
       block:
         - name: Install development tools from official repositories
@@ -58,6 +69,7 @@
             - fzf
             - ripgrep
             - docker
+            - docker-compose
             - github-cli
             - bat
             - tldr
@@ -98,6 +110,7 @@
             - conky
             # - eww
             # - prayer-times
+            - salawat-bin
             - picom
             - picom-jonaburg-git
           ignore_errors: yes
@@ -140,7 +153,6 @@
             - gimp
             - cheese
             - audacity
-            - docker-compose
             - ufw
             - ncmpcpp
             - clamav

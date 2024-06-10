@@ -9,8 +9,6 @@
         repo: https://github.com/budlabs/i3ass.git
         dest: "~/i3ass"
       become_user: "{{ ansible_user_id }}"
-      environment:
-        HOME: "/home/{{ ansible_user_id }}"
 
     - name: Navigate to the i3ass directory
       shell: cd ~/i3ass

@@ -108,9 +108,8 @@
             - fd
             - espanso
             - conky
-            # - eww
-            # - prayer-times
             - salawat-bin
+            # - prayer-times
             - picom
             - picom-jonaburg-git
           ignore_errors: yes
@@ -122,6 +121,7 @@
           with_items:
             - nerd-fonts
             - rofi
+            # - eww
             - polybar
             - feh
             - flameshot

@@ -24,10 +24,13 @@
           command: "yay -S --noconfirm {{ item }}"
           with_items:
             - stow
+            - neofetch
             - python-pip
+            # for ranger
+            - imagemagick
+            - python-ueberzug
             - arandr
             - wezterm
-            - neofetch
             - tmux
             - lazygit
             - fzf
@@ -71,8 +74,8 @@
             - fd
             - espanso
             - conky
-            - eww
-            - prayer-times
+            # - eww
+            # - prayer-times
             - picom
             - picom-jonaburg-git
           ignore_errors: yes
@@ -117,6 +120,7 @@
             - audacity
             - docker-compose
             - ufw
+            - ncmpcpp
             - clamav
             - xpad
           ignore_errors: yes

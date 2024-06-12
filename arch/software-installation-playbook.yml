@@ -85,6 +85,7 @@
             - calibre
             - vlc
             - inkscape
+            - udiskie # to automount usb
           ignore_errors: yes
 
     - name: Install AUR packages

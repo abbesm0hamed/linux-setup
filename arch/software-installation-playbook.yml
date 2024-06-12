@@ -86,6 +86,8 @@
             - vlc
             - inkscape
             - udiskie # to automount usb
+            - woeusb # windows bootable device creator on linux : sudo woeusb --device /Path/isofile /dev/sdx
+            - balena-etcher # bootable usb drive creator
           ignore_errors: yes
 
     - name: Install AUR packages

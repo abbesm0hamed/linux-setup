@@ -68,6 +68,7 @@
             - wezterm
             - tmux
             - lazygit
+            - nodejs-gitmoji-cli
             - fzf
             - ripgrep
             - docker

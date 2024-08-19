@@ -99,7 +99,8 @@
           with_items:
             - sxhkd
             - autotiling
-            - brave-bin
+            # - brave-bin
+            - google-chrome
             - cava
             - fastfetch
             - tpm

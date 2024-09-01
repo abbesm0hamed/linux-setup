@@ -40,6 +40,22 @@
             - rust
           ignore_errors: yes
 
+    # switch user shell to zsh
+    - name: Ensure zsh is installed
+      ansible.builtin.pacman:
+        name: zsh
+        state: present
+
+    - name: Get the current username
+      ansible.builtin.command:
+        cmd: whoami
+      register: current_user
+
+    - name: Change default shell to zsh for the current user
+      ansible.builtin.user:
+        name: "{{ current_user.stdout }}"
+        shell: /usr/bin/zsh
+
     - name: Install Nvidia GPU packages
       block:
         - name: Install Nvidia GPU packages 

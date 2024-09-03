@@ -122,6 +122,7 @@
             - tpm
             - tmuxifier
             - nvm
+            - brightnessctl
             - postman-bin
             - virtualbox
             - visual-studio-code-bin

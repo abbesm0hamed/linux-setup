@@ -167,6 +167,7 @@
             - zoom
             - teams
             - anydesk
+            - net-tools
           ignore_errors: yes
 
     - name: Install media and utility tools

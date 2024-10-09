@@ -95,6 +95,7 @@
             - zoxide
             - lsd
             - neovim
+            - luarocks
             - alacritty
             - mpv
             - ncdu
@@ -138,6 +139,12 @@
             - picom
             # - picom-jonaburg-git
             - picom-simpleanims-git
+            # bluetooth libs
+            - bluez 
+            - bluez-utils
+            # audio libs
+            - pulseaudio-bluetooth
+            - pavucontrol
           ignore_errors: yes
 
     - name: Install fonts and appearance tools

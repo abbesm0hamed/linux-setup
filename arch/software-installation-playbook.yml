@@ -153,6 +153,7 @@
           command: "yay -S --noconfirm {{ item }}"
           with_items:
             - nerd-fonts
+            - ttf-joypixels
             - rofi
             # - eww
             - polybar

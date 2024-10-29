@@ -75,9 +75,10 @@
             - stow
             - neofetch
             - python-pip
+            - sqlite
             - yazi
             - ranger
-            # for ranger or yazi ( show images on terminal )
+            # render images on terminal
             - imagemagick
             - python-ueberzug
             - arandr

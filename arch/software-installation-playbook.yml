@@ -90,6 +90,7 @@
             - ripgrep
             - docker
             - docker-compose
+            - lazydocker
             - github-cli
             - bat
             - tldr

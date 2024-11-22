@@ -84,6 +84,7 @@
             - arandr
             - wezterm
             - tmux
+            - gitmux
             - lazygit
             - nodejs-gitmoji-cli
             - fzf

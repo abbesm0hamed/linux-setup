@@ -148,6 +148,7 @@
             # audio libs
             - pulseaudio-bluetooth
             - pavucontrol
+            - xdg-utils
           ignore_errors: yes
 
     - name: Install fonts and appearance tools

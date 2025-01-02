@@ -82,7 +82,7 @@
             - imagemagick
             - python-ueberzug
             - arandr
-            - wezterm
+            # - wezterm
             - tmux
             - gitmux
             - lazygit
@@ -99,7 +99,7 @@
             - lsd
             - neovim
             - luarocks
-            - alacritty
+            # - alacritty
             - mpv
             - ncdu
             - keepassxc

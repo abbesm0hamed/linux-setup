@@ -9,6 +9,7 @@
           - openssh
           - git
           - stow
+          - ghostty
         state: present
 
     - name: Generate SSH key

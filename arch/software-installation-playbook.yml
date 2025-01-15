@@ -74,6 +74,7 @@
           with_items:
             - stow
             - neofetch
+            - pokemon-colorscripts
             - python-pip
             - sqlite
             - yazi

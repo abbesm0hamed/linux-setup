@@ -118,6 +118,8 @@
         - name: Install AUR packages
           command: "yay -S --noconfirm {{ item }}"
           with_items:
+            - paximer
+            - networkmanager
             - sxhkd
             - autotiling
             - brave-bin
@@ -130,6 +132,7 @@
             - tmuxifier
             - nvm
             - brightnessctl
+            - power-profiles-daemon
             - postman-bin
             - virtualbox
             - visual-studio-code-bin
@@ -147,6 +150,7 @@
             - bluez 
             - bluez-utils
             # audio libs
+            - pulseaudio
             - pulseaudio-bluetooth
             - pavucontrol
             - xdg-utils

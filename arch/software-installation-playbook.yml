@@ -58,7 +58,7 @@
 
     - name: Install Nvidia GPU packages
       block:
-        - name: Install Nvidia GPU packages 
+        - name: Install Nvidia GPU packages
           command: "yay -S --noconfirm {{ item }}"
           with_items:
             - nvidia
@@ -139,6 +139,7 @@
             - the_silver_searcher
             - exa
             - fd
+            - gparted
             - espanso
             - conky
             - salawat-bin
@@ -147,7 +148,7 @@
             # - picom-jonaburg-git
             - picom-simpleanims-git
             # bluetooth libs
-            - bluez 
+            - bluez
             - bluez-utils
             # audio libs
             - pulseaudio

@@ -171,7 +171,7 @@
             - flameshot
             - dunst
             - kvantum
-            - redshift
+            - gammastep
             - xcolor
           ignore_errors: yes
 
